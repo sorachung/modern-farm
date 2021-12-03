@@ -7,6 +7,8 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
+import { harvestPlants } from "./harvester.js"
+import { Catalog } from "./catalog.js"
 
 console.log("Welcome to the main module")
 
@@ -28,4 +30,4 @@ console.log(yearlyPlan);
 // console.log(allPlants);
 
 plantSeeds(yearlyPlan);
-console.log(usePlants())
+Catalog(harvestPlants(usePlants()))

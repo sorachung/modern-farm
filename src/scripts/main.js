@@ -6,6 +6,7 @@ import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant, usePlants } from "./fields.js"
+import { plantSeeds } from "./tractor.js"
 
 console.log("Welcome to the main module")
 
@@ -13,15 +14,18 @@ const yearlyPlan = createPlan();
 
 console.log(yearlyPlan);
 
-const asparagusSeed = createAsparagus()
-const cornSeed = createCorn();
-const potatoSeed = createPotato();
-const soybeanSeed = createSoybean();
-const sunflowerSeed = createSunflower();
-const wheatSeed = createWheat();
-console.log(asparagusSeed, cornSeed, potatoSeed,soybeanSeed,sunflowerSeed,wheatSeed)
+// const asparagusSeed = createAsparagus()
+// const cornSeed = createCorn();
+// const potatoSeed = createPotato();
+// const soybeanSeed = createSoybean();
+// const sunflowerSeed = createSunflower();
+// const wheatSeed = createWheat();
+// console.log(asparagusSeed, cornSeed, potatoSeed,soybeanSeed,sunflowerSeed,wheatSeed)
 
-addPlant(soybeanSeed);
-addPlant(cornSeed);
-const allPlants = usePlants();
-console.log(allPlants);
+// addPlant(soybeanSeed);
+// addPlant(cornSeed);
+// const allPlants = usePlants();
+// console.log(allPlants);
+
+plantSeeds(yearlyPlan);
+console.log(usePlants())

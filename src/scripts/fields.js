@@ -1,14 +1,14 @@
-const allPlants = [];
+const field = [];
 
 export const addPlant = (seedObj) => {
   if (Array.isArray(seedObj)) {
-    allPlants.push(seedObj[0]);
-    allPlants.push(seedObj[1]);
+    field.push(seedObj[0]);
+    field.push(seedObj[1]);
   } else {
-    allPlants.push(seedObj);
+    field.push(seedObj);
   }
 };
 
 export const usePlants = () => {
-  return allPlants.map((plant) => ({ ...plant }));
+  return field.map((plant) => ({ ...plant }));
 };
